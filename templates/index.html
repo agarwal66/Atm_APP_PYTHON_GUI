@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM Menu</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome Mr. Prateek Agarwal</h1>
+        <p>Your balance is {{ user['balance'] }} Money.</p>
+        <h2>What do you want to do?</h2>
+        <form method="POST" action="/menu">
+            <input type="radio" id="withdraw" name="query" value="1">
+            <label for="withdraw">Withdraw Cash</label><br>
+            <input type="radio" id="deposit" name="query" value="2">
+            <label for="deposit">Deposit Cash</label><br>
+            <input type="radio" id="quit" name="query" value="3">
+            <label for="quit">Quit</label><br>
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" name="amount">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
